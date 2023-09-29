@@ -37,5 +37,19 @@ namespace PierresBakery.Tests
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllOrderObjects_OrderList()
+    {
+      string title1 = "Monday ongoing order";
+      string title2 = "Tuesday ongoing order";
+      Order newOrder1 = new Order(title1);
+      Order newOrder2 = new Order(title2);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
