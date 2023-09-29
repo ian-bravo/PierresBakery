@@ -10,7 +10,7 @@ namespace PierresBakery.Tests
   {
     public void Dispose()
     {
-      // Code inside this method is run between each test.
+      Order.ClearAll();
     }
 
     [TestMethod]
@@ -27,6 +27,15 @@ namespace PierresBakery.Tests
       Order newOrder = new Order(title);
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
+    }
+
+    [TestMethod]
+    public void GetId_ReturnsOrderId_Int()
+    {
+      string title = "test title";
+      Order newOrder = new Order(title);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
     }
   }
 }
