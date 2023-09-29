@@ -34,7 +34,7 @@ namespace PierresBakery.Tests
     {
       string name = "test vendor-name";
       Vendor newVendor = new Vendor(name);
-      int result = newVendor.Id;
+      int result = newVendor.Id; 
       Assert.AreEqual(1, result);
     }
   }
