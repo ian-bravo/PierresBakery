@@ -13,6 +13,11 @@ namespace PierresBakery.Tests
       // Code inside this method is run between each test.
     }
 
-    // Test methods go here
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order();
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
   }
 }
