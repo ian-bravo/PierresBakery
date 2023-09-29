@@ -51,5 +51,18 @@ namespace PierresBakery.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string title1 = "Monday ongoing order";
+      string title2 = "Tuesday ongoing order";
+      Order newOrder1 = new Order(title1);
+      Order newOrder2 = new Order(title2);
+
+      Order result = Order.Find(2);
+
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }

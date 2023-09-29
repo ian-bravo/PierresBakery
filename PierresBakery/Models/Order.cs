@@ -24,5 +24,10 @@ namespace PierresBakery.Models
     {
       return _instances;
     }
+
+    public static Order Find(int findId)
+    {
+      return _instances[findId-1];
+    }
   }
 }
