@@ -154,5 +154,19 @@ namespace PierresBakery.Tests
       string result = newOrder.Date;
       Assert.AreEqual(date, result);
     }
+
+    [TestMethod]
+    public void SetDate_SetDate_String()
+    {
+      string title = "test title";
+      string description = "10 pastries";
+      int price = 100;
+      string date = "sept 29";
+      Order newOrder = new Order(title, description, price, date);
+      string changeDate = "sept 30";
+      newOrder.Date = changeDate;
+      string result = newOrder.Date;
+      Assert.AreEqual(changeDate, result);
+    }
   }
 }
