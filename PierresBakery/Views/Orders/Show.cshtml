@@ -10,9 +10,14 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>Order Details:</h1>
-    <h2>@Model["order"].Title</h2>
-    <h3>Vendor: @Model["vendor"].Name</h3>
+    <h1>Vendor: @Model["vendor"].Name</h1>
+    <h2>Order Details:</h2>
+    <ul>
+      <li>Date: @Model["order"].Date</li>
+      <li>Title: @Model["order"].Title</li>
+      <li>Description: @Model["order"].Description</li>
+      <li>Price: @Model["order"].Price</li>
+    </ul>
 
     <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a><br />
     <a href='/vendors'>Return back to list of vendors</a>
