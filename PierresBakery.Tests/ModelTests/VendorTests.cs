@@ -94,5 +94,17 @@ namespace PierresBakery.Tests
       string result = newVendor.Description;
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      string name = "test vendor-name";
+      string description = "best vendor";
+      Vendor newVendor = new Vendor(name, description);
+      string changeDescription = "an ok vendor";
+      newVendor.Description = changeDescription;
+      string result = newVendor.Description;
+      Assert.AreEqual(changeDescription, result);
+    }
   }
 }
