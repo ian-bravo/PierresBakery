@@ -64,5 +64,20 @@ namespace PierresBakery.Tests
 
       Assert.AreEqual(newVendor1, result);
     }
+
+    [TestMethod]
+    public void AddOrder_ConnectsOrderToVendor_OrderList()
+    {
+      string title = "Wednesday ongoing order";
+      Order newOrder = new Order(title);
+      List<Order> newList = new List<Order> { newOrder };
+      string name = "Peets";
+      Vendor newVendor = new Vendor(name);
+      newVendor.AddOrder(newOrder);
+
+      List<Order> result = newVendor.Orders;
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
