@@ -10,6 +10,20 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>Pierre's Bakery</h1>
+    @using PierresBakery.Models;
+
+    <h2>Orders</h2>
+    <ol>
+    @foreach (Order order in @Model["orders"])
+    {
+      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+    }
+    </ol>
+
+    <div>
+    <a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a><br />
+    <a href='/vendors'>Return back to list of vendors</a><br />
+    <a href='/'>Back to Main Page</a>
+    </div>
   </body>
 </html>
