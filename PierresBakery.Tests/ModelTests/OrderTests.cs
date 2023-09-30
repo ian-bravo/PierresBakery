@@ -120,5 +120,18 @@ namespace PierresBakery.Tests
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
     }
+
+    [TestMethod]
+    public void SetPrice_SetPrice_Int()
+    {
+      string title = "test title";
+      string description = "10 pastries";
+      int price = 100;
+      Order newOrder = new Order(title, description, price);
+      int changePrice = 20;
+      newOrder.Price = changePrice;
+      int result = newOrder.Price;
+      Assert.AreEqual(changePrice, result);
+    }
   }
 }
