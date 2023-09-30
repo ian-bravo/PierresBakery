@@ -19,7 +19,7 @@ https://ian-bravo.github.io/PierresBakery/
 
 ## Description
 
-This C# web application will allow Pierre to keep track of all the vendors that purchase his baked goods along with the vendor's associated orders. Pierre can add vendors through a form and their respective orders.
+This C# web application will allow Pierre to keep track of all the vendors that purchase his baked goods along with the vendor's associated orders. Pierre can add vendors through a form. After submitting this form, Pierre will be redirected to the homepage. On the homepage, Pierre can navigate to a separate web page where all his vendor's are displayed. Pierre can also add new orders for a particular vendor.
 
 ## Setup/Installation Requirements
 
