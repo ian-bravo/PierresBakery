@@ -2,7 +2,7 @@
 
 #### By _**Ian Bravo**_
 
-#### _This console application will.._
+#### _This web application will allow Pierre to manage his vendor's and their orders._
 
 ## GitHub Page ##
 
@@ -19,7 +19,7 @@ https://ian-bravo.github.io/PierresBakery/
 
 ## Description
 
-This C# project will...
+This C# web application will allow Pierre to keep track of all the vendors that purchase his baked goods along with the vendor's associated orders. Pierre can add vendors through a form and their respective orders.
 
 ## Setup/Installation Requirements
 
