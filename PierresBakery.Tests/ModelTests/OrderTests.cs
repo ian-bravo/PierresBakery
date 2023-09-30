@@ -90,5 +90,17 @@ namespace PierresBakery.Tests
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      string title = "test title";
+      string description = "10 pastries";
+      Order newOrder = new Order(title, description);
+      string changeDescription = "2 pastries";
+      newOrder.Description = changeDescription;
+      string result = newOrder.Description;
+      Assert.AreEqual(changeDescription, result);
+    }
   }
 }
