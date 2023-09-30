@@ -30,6 +30,17 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
+    public void SetTitle_SetTitle_String()
+    {
+      string title = "test title";
+      Order newOrder = new Order(title);
+      string changeTitle = "modified holiday order";
+      newOrder.Title = changeTitle;
+      string result = newOrder.Title;
+      Assert.AreEqual(changeTitle, result);
+    }
+
+    [TestMethod]
     public void GetId_ReturnsOrderId_Int()
     {
       string title = "test title";
