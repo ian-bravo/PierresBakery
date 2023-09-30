@@ -16,7 +16,7 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("test vendor-name");
+      Vendor newVendor = new Vendor("test vendor-name", "best vendor");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
@@ -24,7 +24,8 @@ namespace PierresBakery.Tests
     public void GetName_ReturnsName_String()
     {
       string name = "test vendor-name";
-      Vendor newVendor = new Vendor(name);
+      string description = "best vendor";
+      Vendor newVendor = new Vendor(name, description);
       string result = newVendor.Name;
       Assert.AreEqual(name, result);
     }
@@ -33,7 +34,8 @@ namespace PierresBakery.Tests
     public void GetId_ReturnsVendorId_Int()
     {
       string name = "test vendor-name";
-      Vendor newVendor = new Vendor(name);
+      string description = "best vendor";
+      Vendor newVendor = new Vendor(name, description);
       int result = newVendor.Id; 
       Assert.AreEqual(1, result);
     }
@@ -43,8 +45,9 @@ namespace PierresBakery.Tests
     {
       string name1 = "Peets";
       string name2 = "Starbucks";
-      Vendor newVendor1 = new Vendor(name1);
-      Vendor newVendor2 = new Vendor(name2);
+      string description = "best vendor";
+      Vendor newVendor1 = new Vendor(name1, description);
+      Vendor newVendor2 = new Vendor(name2, description);
       List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
       List<Vendor> result = Vendor.GetAll();
@@ -57,8 +60,9 @@ namespace PierresBakery.Tests
     {
       string name1 = "Peets";
       string name2 = "Starbucks";
-      Vendor newVendor1 = new Vendor(name1);
-      Vendor newVendor2 = new Vendor(name2);
+      string description = "best vendor";
+      Vendor newVendor1 = new Vendor(name1, description);
+      Vendor newVendor2 = new Vendor(name2, description);
 
       Vendor result = Vendor.Find(1);
 
@@ -72,12 +76,23 @@ namespace PierresBakery.Tests
       Order newOrder = new Order(title);
       List<Order> newList = new List<Order> { newOrder };
       string name = "Peets";
-      Vendor newVendor = new Vendor(name);
+      string description = "best vendor";
+      Vendor newVendor = new Vendor(name, description);
       newVendor.AddOrder(newOrder);
 
       List<Order> result = newVendor.Orders;
 
       CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string name = "test vendor-name";
+      string description = "best vendor";
+      Vendor newVendor = new Vendor(name, description);
+      string result = newVendor.Description;
+      Assert.AreEqual(description, result);
     }
   }
 }
