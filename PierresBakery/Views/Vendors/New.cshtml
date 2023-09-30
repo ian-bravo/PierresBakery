@@ -10,6 +10,17 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>Pierre's Bakery</h1>
+    <h1>Pierre's add-a-vendor form!</h1>
+    <form action='/vendors' method='post'>
+      <label for='vendorName'>Vendor name</label>
+      <input id='vendorName' name='vendorName' type="text">
+      <label for='vendorDescription'>Vendor description</label>
+      <input id='vendorDescription' name='vendorDescription' type="text">
+      <button type='submit'>Add vendor</button>
+    </form>
+    <div>
+      <a href='/'>Back to Main Page</a> <br />
+      <a href='/vendors'>Back to vendors</a>
+    </div>
   </body>
 </html>

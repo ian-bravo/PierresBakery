@@ -10,6 +10,22 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>Pierre's Bakery</h1>
+    @using PierresBakery.Models;
+
+    <h1>Pierre's Vendors:</h1>
+    <h2><a href='vendors/new'>Add a vendor</a></h2>
+    @if (@Model.Count == 0)
+    {
+      <h2>Currently no vendors have been added.</h2>
+    }
+
+    @foreach (Vendor vendor in Model)
+    {
+      <h2><a href='/vendors/@vendor.Id'>@vendor.Name</a></h2>
+    }
+
+    <div>
+      <a href='/'>Back to Main Page</a>
+    </div>
   </body>
 </html>
