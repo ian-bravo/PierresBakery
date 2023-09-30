@@ -73,7 +73,8 @@ namespace PierresBakery.Tests
     public void AddOrder_ConnectsOrderToVendor_OrderList()
     {
       string title = "Wednesday ongoing order";
-      Order newOrder = new Order(title);
+      string descriptionOfOrder = "10 pastries";
+      Order newOrder = new Order(title, descriptionOfOrder);
       List<Order> newList = new List<Order> { newOrder };
       string name = "Peets";
       string description = "best vendor";

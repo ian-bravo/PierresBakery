@@ -7,12 +7,14 @@ namespace PierresBakery.Models
     private static List<Order> _instances = new List<Order> {};
     public string Title { get; set; }
     public int Id { get; }
+    public string Description { get; set; }
 
-    public Order (string orderTitle)
+    public Order (string orderTitle, string orderDescription)
     {
       Title = orderTitle;
       _instances.Add(this);
       Id = _instances.Count;
+      Description = orderDescription;
     }
 
     public static void ClearAll()
