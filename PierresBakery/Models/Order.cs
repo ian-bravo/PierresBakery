@@ -9,14 +9,16 @@ namespace PierresBakery.Models
     public int Id { get; }
     public string Description { get; set; }
     public int Price { get; set; }
+    public string Date { get; set; }
 
-    public Order (string orderTitle, string orderDescription, int orderPrice)
+    public Order (string orderTitle, string orderDescription, int orderPrice, string orderDate)
     {
       Title = orderTitle;
       _instances.Add(this);
       Id = _instances.Count;
       Description = orderDescription;
       Price = orderPrice;
+      Date = orderDate;
     }
 
     public static void ClearAll()

@@ -75,7 +75,8 @@ namespace PierresBakery.Tests
       string title = "Wednesday ongoing order";
       string descriptionOfOrder = "10 pastries";
       int price = 100;
-      Order newOrder = new Order(title, descriptionOfOrder, price);
+      string date = "sept 29";
+      Order newOrder = new Order(title, descriptionOfOrder, price, date);
       List<Order> newList = new List<Order> { newOrder };
       string name = "Peets";
       string description = "best vendor";
